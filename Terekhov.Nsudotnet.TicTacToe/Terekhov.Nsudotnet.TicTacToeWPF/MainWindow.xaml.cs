@@ -151,6 +151,8 @@ namespace MTicTacToeWPF
 							{
 								InitField();
 								InitWinners();
+								_nextTurnAllowedX = null;
+								_nextTurnAllowedY = null;
 								foreach (var b in GridsGrid.Children.OfType<Grid>().SelectMany(g => g.Children.OfType<Button>()))
 								{
 									b.Content = "";

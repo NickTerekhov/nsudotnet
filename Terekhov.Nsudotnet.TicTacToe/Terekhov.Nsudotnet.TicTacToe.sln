@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2012
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Terekhov.Nsudotnet.TicTacToe", "Terekhov.Nsudotnet.TicTacToe\Terekhov.Nsudotnet.TicTacToe.csproj", "{03389680-3E77-4005-B1C9-5C9A9BFA33C7}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Terekhov.Nsudotnet.TicTacToeWPF", "Terekhov.Nsudotnet.TicTacToeWPF\Terekhov.Nsudotnet.TicTacToeWPF.csproj", "{03389680-3E77-4005-B1C9-5C9A9BFA33C7}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
