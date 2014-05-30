@@ -1,5 +1,4 @@
 using System;
-using System.Reflection;
 
 namespace Terekhov.Nsudotnet.JsonSerializer
 {
@@ -10,13 +9,13 @@ namespace Terekhov.Nsudotnet.JsonSerializer
 			get ;
 			set ;
 		}
-	   	public string s;
-	    public int[]  emptyArray;
+	   	public string Str;
+	    public int[]  EmptyArray;
 		[NonSerialized]
-	   	public string ignore; // это поле не должно сериализоваться
+	   	public string Ignore; // это поле не должно сериализоваться
 	
-	   	public int[] arrayMember;
-	    public Serializator serializatorClassTest;
+	   	public int[] ArrayMember;
+	    public Serializator SerializatorClassTest;
 	}
 }
 

@@ -18,6 +18,6 @@ Global
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(MonoDevelopProperties) = preSolution
-		StartupItem = Terekhov.Nsudotnet.JsonSerializer\JSON.csproj
+		StartupItem = Terekhov.Nsudotnet.JsonSerializer\Terekhov.Nsudotnet.JsonSerializer.csproj
 	EndGlobalSection
 EndGlobal

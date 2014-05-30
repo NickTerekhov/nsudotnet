@@ -1,8 +1,6 @@
 using System;
-using System;
-using System.Reflection;
-using System.Collections.Generic;
 using System.Linq;
+using System.Reflection;
 using System.Text;
 
 namespace Terekhov.Nsudotnet.JsonSerializer
@@ -10,7 +8,7 @@ namespace Terekhov.Nsudotnet.JsonSerializer
     [Serializable]
     public class Serializator
     {
-        public string piuPiuString;
+        public string PiuPiuString;
 
         public StringBuilder Serialize(Object objectToSerialize)
         {
@@ -42,7 +40,7 @@ namespace Terekhov.Nsudotnet.JsonSerializer
             {
                 flag =
                     Attribute.GetCustomAttributes(mi)
-                        .Any(attr => attr.GetType() == typeof (System.NonSerializedAttribute));
+                        .Any(attr => attr is NonSerializedAttribute);
 
                 if (flag == true)
                     continue;
@@ -58,7 +56,7 @@ namespace Terekhov.Nsudotnet.JsonSerializer
                     }
                     sb.Append("[");
                     for (int i = 0; i < arr.Length; i++)
-                        sb.Append(arr.GetValue(i).ToString() + ", ");
+                        sb.Append(arr.GetValue(i)).Append(", ");
                     if (0 != arr.Length)
                     {
                         sb.Replace(", ", String.Empty, sb.Length - 2, 2);
