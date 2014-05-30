@@ -55,11 +55,14 @@ namespace Terekhov.Nsudotnet.JsonSerializer
                         continue;
                     }
                     sb.Append("[");
-                    for (int i = 0; i < arr.Length; i++)
-                        sb.Append(arr.GetValue(i)).Append(", ");
+
                     if (0 != arr.Length)
                     {
-                        sb.Replace(", ", String.Empty, sb.Length - 2, 2);
+                        for (int i = 0; i < arr.Length - 1; i++)
+                        {
+                            sb.Append(arr.GetValue(i)).Append(", ");
+                        }
+                        sb.Append(arr.GetValue(arr.Length - 1));
                     }
                     sb.Append("]");
                 } else if (mi.FieldType.IsPrimitive)
@@ -67,10 +70,12 @@ namespace Terekhov.Nsudotnet.JsonSerializer
                     if (mi.FieldType == typeof (char))
                     {
                         sb.Append(mi.GetValue(obj)).Append("\"").Append("\n");
-                    }
-                    if (mi.FieldType == typeof (bool))
+                    } else if (mi.FieldType == typeof (bool))
                     {
                         sb.Append(mi.GetValue(obj).ToString().ToLower());
+                    } else 
+                    {
+                        sb.Append(mi.GetValue(obj));
                     }
                 } else if (mi.FieldType == typeof (string))
                 {
