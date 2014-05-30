@@ -1,6 +1,7 @@
 using System;
+using System.Text;
 
-namespace JSON
+namespace Terekhov.Nsudotnet.JsonSerializer
 {	
 	class MainClass
 	{				
@@ -10,9 +11,12 @@ namespace JSON
 			testObj.i = 1;
 			testObj.s = "string";
 			testObj.arrayMember = new int[3] {1, 2, 3};
-			
+            StringBuilder stringToPrint = new StringBuilder();			
 			Serializator serializator = new Serializator();
-			Console.WriteLine (serializator.serial(testObj));
+            serializator.piuPiuString = "piu-piu";
+
+            Console.WriteLine(serializator.Serialize(testObj));
+
 		}
 	}
 }

@@ -1,7 +1,7 @@
 using System;
 using System.Reflection;
 
-namespace JSON
+namespace Terekhov.Nsudotnet.JsonSerializer
 {
 	[Serializable]
 	public class TestClass
@@ -11,11 +11,12 @@ namespace JSON
 			set ;
 		}
 	   	public string s;
-			
+	    public int[]  emptyArray;
 		[NonSerialized]
 	   	public string ignore; // это поле не должно сериализоваться
 	
 	   	public int[] arrayMember;
+	    public Serializator serializatorClassTest;
 	}
 }
 

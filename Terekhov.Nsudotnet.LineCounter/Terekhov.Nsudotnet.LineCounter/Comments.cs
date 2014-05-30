@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace LineCounter
+namespace Terekhov.Nsudotnet.LineCounter
 {
 	[Serializable]
 	public class Comments

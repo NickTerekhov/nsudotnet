@@ -4,7 +4,7 @@ using System.IO;
 using System.Linq;
 using System.Xml.Serialization;
 
-namespace LineCounter
+namespace Terekhov.Nsudotnet.LineCounter
 {
 	class LineCounter
 	{
